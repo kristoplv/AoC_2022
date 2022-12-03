@@ -1,19 +1,8 @@
-with open("C:\\Users\\KristoMarleen\\Documents\\AoC_2022\\Day 1\\input.txt") as f:
+with open(
+    "C:\\Users\\KristoMarleen\\Documents\\AoC_2022\\Day 1\\Day 1 part 1\\input.txt"
+) as f:
     f.seek(0)
     rawin = f.read()
-
-
-elves = rawin.split("\n\n")
-sumelves = []
-for line in elves:
-    intfoods = []
-    elf = line.splitlines()
-    for food in elf:
-        intfoods.append(int(food))
-sumelves.append(sum(intfoods))
-sumelves.sort(reverse=True)
-print(sum(sumelves))
-
 
 elves = rawin.split("\n")
 i = 0
