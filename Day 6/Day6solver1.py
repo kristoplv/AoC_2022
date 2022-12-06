@@ -1,0 +1,19 @@
+with open("C:\\Users\\KristoMarleen\\Documents\\AoC_2022\\Day 6\\input6.txt") as f:
+    f.seek(0)
+    rawin = f.read()
+supermegaList = []
+for i in range(len(rawin)):
+    superList = []
+    if i >= 3:
+        for a in range(0, 4):
+            superList.append(rawin[i - a])
+    superList.append(i + 1)
+    supermegaList.append(superList)
+iterationNumber = 0
+for i in range(len(supermegaList)):
+    if len(set(supermegaList[i])) == 5:
+        print("esimene key kohal, ", supermegaList[i][4])
+        iterationNumber = supermegaList[i][4]
+        break
+print(supermegaList)
+print(iterationNumber)
